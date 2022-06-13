@@ -44,6 +44,7 @@
             this.fixed_label2 = new System.Windows.Forms.Label();
             this.search_number_box = new System.Windows.Forms.TextBox();
             this.mid_panel = new System.Windows.Forms.Panel();
+            this.won_label = new System.Windows.Forms.Label();
             this.match_num_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.match_bonus_num_label = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.grade_number_label = new System.Windows.Forms.Label();
             this.grade_label = new System.Windows.Forms.Label();
             this.money_label = new System.Windows.Forms.Label();
-            this.won_label = new System.Windows.Forms.Label();
             this.used_money_label = new System.Windows.Forms.Label();
             this.fixed_comment = new System.Windows.Forms.Label();
             this.top_panel = new System.Windows.Forms.Panel();
@@ -84,7 +84,7 @@
             this.num1.Size = new System.Drawing.Size(64, 50);
             this.num1.TabIndex = 1;
             this.num1.Text = "00";
-            this.num1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num2
             // 
@@ -95,7 +95,7 @@
             this.num2.Size = new System.Drawing.Size(64, 50);
             this.num2.TabIndex = 1;
             this.num2.Text = "00";
-            this.num2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num3
             // 
@@ -106,7 +106,7 @@
             this.num3.Size = new System.Drawing.Size(64, 50);
             this.num3.TabIndex = 1;
             this.num3.Text = "00";
-            this.num3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num5
             // 
@@ -117,7 +117,7 @@
             this.num5.Size = new System.Drawing.Size(64, 50);
             this.num5.TabIndex = 1;
             this.num5.Text = "00";
-            this.num5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num6
             // 
@@ -128,7 +128,7 @@
             this.num6.Size = new System.Drawing.Size(64, 50);
             this.num6.TabIndex = 1;
             this.num6.Text = "00";
-            this.num6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num4
             // 
@@ -139,7 +139,7 @@
             this.num4.Size = new System.Drawing.Size(64, 50);
             this.num4.TabIndex = 1;
             this.num4.Text = "00";
-            this.num4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.num4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bonus
             // 
@@ -150,7 +150,7 @@
             this.bonus.Size = new System.Drawing.Size(64, 50);
             this.bonus.TabIndex = 1;
             this.bonus.Text = "00";
-            this.bonus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -161,7 +161,7 @@
             this.label1.Size = new System.Drawing.Size(49, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "+";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // center_panel
             // 
@@ -195,6 +195,7 @@
             this.result_box.Name = "result_box";
             this.result_box.Size = new System.Drawing.Size(406, 57);
             this.result_box.TabIndex = 2;
+            this.result_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // search_button
             // 
@@ -256,6 +257,16 @@
             this.mid_panel.Size = new System.Drawing.Size(662, 426);
             this.mid_panel.TabIndex = 2;
             // 
+            // won_label
+            // 
+            this.won_label.AutoSize = true;
+            this.won_label.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.won_label.Location = new System.Drawing.Point(608, 120);
+            this.won_label.Name = "won_label";
+            this.won_label.Size = new System.Drawing.Size(50, 50);
+            this.won_label.TabIndex = 4;
+            this.won_label.Text = "\\";
+            // 
             // match_num_label
             // 
             this.match_num_label.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -269,14 +280,14 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(496, 266);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 50);
+            this.label2.Size = new System.Drawing.Size(46, 50);
             this.label2.TabIndex = 10;
             this.label2.Text = "+";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // match_bonus_num_label
             // 
@@ -330,16 +341,6 @@
             this.money_label.TabIndex = 5;
             this.money_label.Text = "0000000000000000";
             this.money_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // won_label
-            // 
-            this.won_label.AutoSize = true;
-            this.won_label.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.won_label.Location = new System.Drawing.Point(608, 120);
-            this.won_label.Name = "won_label";
-            this.won_label.Size = new System.Drawing.Size(50, 50);
-            this.won_label.TabIndex = 4;
-            this.won_label.Text = "\\";
             // 
             // used_money_label
             // 
