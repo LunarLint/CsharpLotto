@@ -30,21 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LottoForm));
             this.lotto_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.center_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.result_box = new Lotto.RoundLabel();
             this.search_button = new System.Windows.Forms.Button();
             this.fixed_label2 = new System.Windows.Forms.Label();
             this.search_number_box = new System.Windows.Forms.TextBox();
             this.mid_panel = new System.Windows.Forms.Panel();
-            this.num3 = new Lotto.RoundLabel();
-            this.num5 = new Lotto.RoundLabel();
-            this.bonus = new Lotto.RoundLabel();
-            this.num6 = new Lotto.RoundLabel();
-            this.num4 = new Lotto.RoundLabel();
-            this.num2 = new Lotto.RoundLabel();
-            this.num1 = new Lotto.RoundLabel();
             this.won_label = new System.Windows.Forms.Label();
             this.match_num_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +51,13 @@
             this.close_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.move_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.result_box = new Lotto.RoundLabel();
+            this.num3 = new Lotto.RoundLabel();
+            this.num5 = new Lotto.RoundLabel();
+            this.num6 = new Lotto.RoundLabel();
+            this.num4 = new Lotto.RoundLabel();
+            this.num2 = new Lotto.RoundLabel();
+            this.num1 = new Lotto.RoundLabel();
             this.center_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.mid_panel.SuspendLayout();
@@ -78,17 +76,6 @@
             this.lotto_button.TabIndex = 0;
             this.lotto_button.UseVisualStyleBackColor = false;
             this.lotto_button.Click += new System.EventHandler(this.lotto_button_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(519, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 50);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "+";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // center_panel
             // 
@@ -114,16 +101,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 72);
             this.panel1.TabIndex = 3;
-            // 
-            // result_box
-            // 
-            this.result_box.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.result_box.Location = new System.Drawing.Point(252, 6);
-            this.result_box.Name = "result_box";
-            this.result_box.Size = new System.Drawing.Size(406, 57);
-            this.result_box.TabIndex = 19;
-            this.result_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.result_box.Click += new System.EventHandler(this.result_box_Click);
             // 
             // search_button
             // 
@@ -168,7 +145,6 @@
             this.mid_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mid_panel.Controls.Add(this.num3);
             this.mid_panel.Controls.Add(this.num5);
-            this.mid_panel.Controls.Add(this.bonus);
             this.mid_panel.Controls.Add(this.num6);
             this.mid_panel.Controls.Add(this.num4);
             this.mid_panel.Controls.Add(this.num2);
@@ -183,92 +159,12 @@
             this.mid_panel.Controls.Add(this.money_label);
             this.mid_panel.Controls.Add(this.used_money_label);
             this.mid_panel.Controls.Add(this.fixed_comment);
-            this.mid_panel.Controls.Add(this.label1);
             this.mid_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mid_panel.Location = new System.Drawing.Point(0, 50);
             this.mid_panel.Name = "mid_panel";
             this.mid_panel.Size = new System.Drawing.Size(662, 284);
             this.mid_panel.TabIndex = 2;
             this.mid_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.mid_panel_Paint);
-            // 
-            // num3
-            // 
-            this.num3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num3.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num3.Location = new System.Drawing.Point(179, 53);
-            this.num3.Name = "num3";
-            this.num3.Size = new System.Drawing.Size(65, 65);
-            this.num3.TabIndex = 18;
-            this.num3.Text = "00";
-            this.num3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.num3.Click += new System.EventHandler(this.num3_Click);
-            // 
-            // num5
-            // 
-            this.num5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num5.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num5.Location = new System.Drawing.Point(349, 53);
-            this.num5.Name = "num5";
-            this.num5.Size = new System.Drawing.Size(65, 65);
-            this.num5.TabIndex = 17;
-            this.num5.Text = "00";
-            this.num5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bonus
-            // 
-            this.bonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.bonus.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.bonus.Location = new System.Drawing.Point(588, 53);
-            this.bonus.Name = "bonus";
-            this.bonus.Size = new System.Drawing.Size(65, 65);
-            this.bonus.TabIndex = 16;
-            this.bonus.Text = "00";
-            this.bonus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // num6
-            // 
-            this.num6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num6.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num6.Location = new System.Drawing.Point(434, 53);
-            this.num6.Name = "num6";
-            this.num6.Size = new System.Drawing.Size(65, 65);
-            this.num6.TabIndex = 15;
-            this.num6.Text = "00";
-            this.num6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // num4
-            // 
-            this.num4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num4.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num4.Location = new System.Drawing.Point(264, 53);
-            this.num4.Name = "num4";
-            this.num4.Size = new System.Drawing.Size(65, 65);
-            this.num4.TabIndex = 14;
-            this.num4.Text = "00";
-            this.num4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // num2
-            // 
-            this.num2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num2.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num2.Location = new System.Drawing.Point(94, 53);
-            this.num2.Name = "num2";
-            this.num2.Size = new System.Drawing.Size(65, 65);
-            this.num2.TabIndex = 13;
-            this.num2.Text = "00";
-            this.num2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.num2.Click += new System.EventHandler(this.num2_Click);
-            // 
-            // num1
-            // 
-            this.num1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.num1.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
-            this.num1.Location = new System.Drawing.Point(9, 53);
-            this.num1.Name = "num1";
-            this.num1.Size = new System.Drawing.Size(65, 65);
-            this.num1.TabIndex = 12;
-            this.num1.Text = "00";
-            this.num1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // won_label
             // 
@@ -440,6 +336,84 @@
             this.move_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.move_panel_MouseMove);
             this.move_panel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.move_panel_MouseUp);
             // 
+            // result_box
+            // 
+            this.result_box.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.result_box.Location = new System.Drawing.Point(252, 6);
+            this.result_box.Name = "result_box";
+            this.result_box.Size = new System.Drawing.Size(406, 57);
+            this.result_box.TabIndex = 19;
+            this.result_box.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.result_box.Click += new System.EventHandler(this.result_box_Click);
+            // 
+            // num3
+            // 
+            this.num3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num3.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num3.Location = new System.Drawing.Point(239, 53);
+            this.num3.Name = "num3";
+            this.num3.Size = new System.Drawing.Size(65, 65);
+            this.num3.TabIndex = 18;
+            this.num3.Text = "00";
+            this.num3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.num3.Click += new System.EventHandler(this.num3_Click);
+            // 
+            // num5
+            // 
+            this.num5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num5.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num5.Location = new System.Drawing.Point(469, 53);
+            this.num5.Name = "num5";
+            this.num5.Size = new System.Drawing.Size(65, 65);
+            this.num5.TabIndex = 17;
+            this.num5.Text = "00";
+            this.num5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // num6
+            // 
+            this.num6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num6.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num6.Location = new System.Drawing.Point(584, 53);
+            this.num6.Name = "num6";
+            this.num6.Size = new System.Drawing.Size(65, 65);
+            this.num6.TabIndex = 15;
+            this.num6.Text = "00";
+            this.num6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // num4
+            // 
+            this.num4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num4.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num4.Location = new System.Drawing.Point(354, 53);
+            this.num4.Name = "num4";
+            this.num4.Size = new System.Drawing.Size(65, 65);
+            this.num4.TabIndex = 14;
+            this.num4.Text = "00";
+            this.num4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // num2
+            // 
+            this.num2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num2.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num2.Location = new System.Drawing.Point(124, 53);
+            this.num2.Name = "num2";
+            this.num2.Size = new System.Drawing.Size(65, 65);
+            this.num2.TabIndex = 13;
+            this.num2.Text = "00";
+            this.num2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.num2.Click += new System.EventHandler(this.num2_Click);
+            // 
+            // num1
+            // 
+            this.num1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.num1.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold);
+            this.num1.Location = new System.Drawing.Point(9, 53);
+            this.num1.Name = "num1";
+            this.num1.Size = new System.Drawing.Size(65, 65);
+            this.num1.TabIndex = 12;
+            this.num1.Text = "00";
+            this.num1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LottoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -471,7 +445,6 @@
         #endregion
 
         private System.Windows.Forms.Button lotto_button;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel center_panel;
         private System.Windows.Forms.Panel top_panel;
         private System.Windows.Forms.Panel mid_panel;
@@ -493,7 +466,6 @@
         private RoundLabel num1;
         private RoundLabel num3;
         private RoundLabel num5;
-        private RoundLabel bonus;
         private RoundLabel num6;
         private RoundLabel num4;
         private RoundLabel num2;

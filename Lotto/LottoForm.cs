@@ -23,11 +23,11 @@ namespace Lotto
         int mvalX, mvalY;
         private void move_panel_MouseDown(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
-            tagmove = true;
-            mvalX = e.X;
-            mvalY = e.Y;
+                tagmove = true;
+                mvalX = e.X;
+                mvalY = e.Y;
             }
         }
         private void move_panel_MouseMove(object sender, MouseEventArgs e)
@@ -108,7 +108,6 @@ namespace Lotto
             num4.Text = "";
             num5.Text = "";
             num6.Text = "";
-            bonus.Text = "";
             grade_number_label.Text = "NULL";
             match_bonus_num_label.Text = "NULL";
             match_num_label.Text = "NULL";
@@ -118,7 +117,6 @@ namespace Lotto
             num4.cornerRadius = 60;
             num5.cornerRadius = 60;
             num6.cornerRadius = 60;
-            bonus.cornerRadius = 60;
 
             num1.borderWidth = 2;
             num2.borderWidth = 2;
@@ -126,7 +124,6 @@ namespace Lotto
             num4.borderWidth = 2;
             num5.borderWidth = 2;
             num6.borderWidth = 2;
-            bonus.borderWidth = 2;
 
             num1.backColor = Color.White;
             num2.backColor = Color.White;
@@ -134,7 +131,6 @@ namespace Lotto
             num4.backColor = Color.White;
             num5.backColor = Color.White;
             num6.backColor = Color.White;
-            bonus.backColor = Color.White;
             result_box.backColor = Color.White;
         }
 
@@ -142,7 +138,7 @@ namespace Lotto
         {
             lotto_num[0] = new Random().Next(1, 46);
 
-            for (int i = 1; i < 7; i++)
+            for (int i = 1; i < 6; i++)
             {
                 lotto_num[i] = new Random().Next(1, 46);
 
@@ -280,34 +276,12 @@ namespace Lotto
                 num6.borderColor = Color.Green;
             }
 
-            if (lotto_num[6] <= 10)
-            {
-                bonus.borderColor = Color.Yellow;
-            }
-            else if (11 <= lotto_num[6] && lotto_num[6] <= 20)
-            {
-                bonus.borderColor = Color.Blue;
-            }
-            else if (21 <= lotto_num[6] && lotto_num[6] <= 30)
-            {
-                bonus.borderColor = Color.Red;
-            }
-            else if (31 <= lotto_num[6] && lotto_num[6] <= 40)
-            {
-                bonus.borderColor = Color.Black;
-            }
-            else
-            {
-                bonus.borderColor = Color.Green;
-            }
-
             num1.Text = lotto_num[0].ToString();
             num2.Text = lotto_num[1].ToString();
             num3.Text = lotto_num[2].ToString();
             num4.Text = lotto_num[3].ToString();
             num5.Text = lotto_num[4].ToString();
             num6.Text = lotto_num[5].ToString();
-            bonus.Text = lotto_num[6].ToString();
 
             used_money += 1000;
             money_label.Text = used_money.ToString();
@@ -315,15 +289,17 @@ namespace Lotto
             int match_num = 0;
             int bonus_num = 0;
 
-            if (lotto_num[6] == search_lotto_num[6])
-            {
-                bonus_num = 1;
-            }
 
-            for (int i = 0; i < 6; i++)
+
+            for (int i = 0; i < 5; i++)
             {
-                for (int j = 1; j < 6; j++)
-                {
+
+                    if (lotto_num[i] == search_lotto_num[6])
+                    {
+
+                            bonus_num = 1;
+                    }
+                  for (int j = 1; j < 6; j++) {
                     if (lotto_num[i] == search_lotto_num[j])
                     {
                         match_num++;
