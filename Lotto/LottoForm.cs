@@ -19,6 +19,28 @@ namespace Lotto
 
     public partial class LottoForm : Form
     {
+        bool tagmove;
+        int mvalX, mvalY;
+        private void move_panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+            tagmove = true;
+            mvalX = e.X;
+            mvalY = e.Y;
+            }
+        }
+        private void move_panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (tagmove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - mvalX, MousePosition.Y - mvalY);
+            }
+        }
+        private void move_panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            tagmove = false;
+        }
         #region
         private string GetHttpLottoString(string strUri)
         {
@@ -399,7 +421,7 @@ namespace Lotto
         }
         private void search_number_box_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == 32)
+            if (e.KeyChar == 32)
             {
                 e.Handled = true;
             }
@@ -420,7 +442,10 @@ namespace Lotto
                 this.close_button_Click(sender, e);
             }
         }
-
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
 
         private void mid_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -452,10 +477,7 @@ namespace Lotto
 
         }
 
-        private void close_button_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
+
     }
 }
 

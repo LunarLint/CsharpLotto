@@ -58,6 +58,8 @@
             this.top_panel = new System.Windows.Forms.Panel();
             this.head_label = new System.Windows.Forms.Label();
             this.close_button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.move_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.center_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.mid_panel.SuspendLayout();
@@ -419,6 +421,25 @@
             this.close_button.UseVisualStyleBackColor = false;
             this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(300, -91);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(253, 100);
+            this.panel2.TabIndex = 4;
+            // 
+            // move_panel
+            // 
+            this.move_panel.BackColor = System.Drawing.Color.Transparent;
+            this.move_panel.Location = new System.Drawing.Point(1, 1);
+            this.move_panel.Name = "move_panel";
+            this.move_panel.Size = new System.Drawing.Size(684, 12);
+            this.move_panel.TabIndex = 0;
+            this.move_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.move_panel_MouseDown);
+            this.move_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.move_panel_MouseMove);
+            this.move_panel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.move_panel_MouseUp);
+            // 
             // LottoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -428,12 +449,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CancelButton = this.close_button;
             this.ClientSize = new System.Drawing.Size(687, 430);
+            this.Controls.Add(this.move_panel);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.center_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "LottoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Auto Lotto";
             this.center_panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -476,6 +499,8 @@
         private RoundLabel num2;
         private RoundLabel result_box;
         private System.Windows.Forms.Label head_label;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel move_panel;
     }
 }
 
