@@ -158,6 +158,7 @@
             this.search_number_box.TabIndex = 0;
             this.search_number_box.TextChanged += new System.EventHandler(this.search_number_box_TextChanged);
             this.search_number_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.search_number_box_KeyDown);
+            this.search_number_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.search_number_box_KeyPress);
             // 
             // mid_panel
             // 
@@ -416,7 +417,7 @@
             this.close_button.Size = new System.Drawing.Size(44, 44);
             this.close_button.TabIndex = 1;
             this.close_button.UseVisualStyleBackColor = false;
-            this.close_button.Click += new System.EventHandler(this.button1_Click);
+            this.close_button.Click += new System.EventHandler(this.close_button_Click);
             // 
             // LottoForm
             // 

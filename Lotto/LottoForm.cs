@@ -397,7 +397,13 @@ namespace Lotto
             search_lotto_num[5] = Convert.ToInt32(jac["drwtNo6"].GetValue());
             search_lotto_num[6] = Convert.ToInt32(jac["bnusNo"].GetValue());
         }
-
+        private void search_number_box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 32)
+            {
+                e.Handled = true;
+            }
+        }
         private void search_number_box_KeyDown(object sender, KeyEventArgs e)
         {
             //Press Enter Key
@@ -405,12 +411,16 @@ namespace Lotto
             {
                 this.search_button_Click(sender, e);
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                this.lotto_button_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.close_button_Click(sender, e);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
 
         private void mid_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -440,6 +450,11 @@ namespace Lotto
         private void search_number_box_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void close_button_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
